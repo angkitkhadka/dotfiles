@@ -23,5 +23,17 @@ return {
         max_height = 40,
       },
     },
+    picker = {
+      sources = {
+        explorer = {
+          hidden = true,
+          ignored = true,
+        },
+        files = {
+          hidden = true,
+          ignored = true,
+        },
+      },
+    },
   },
 }
