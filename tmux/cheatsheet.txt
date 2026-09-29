@@ -1,0 +1,112 @@
+PREFIX = Ctrl-b
+
+Ctrl-b h        Move to pane on the left
+Ctrl-b j        Move to pane below
+Ctrl-b k        Move to pane above
+Ctrl-b l        Move to pane on the right
+Ctrl-b o        Move to next pane
+Ctrl-b ;        Move to previously active pane
+
+Ctrl-b %        Split pane vertically
+Ctrl-b "        Split pane horizontally
+Ctrl-b x        Kill current pane
+Ctrl-b z        Toggle pane zoom
+Ctrl-b !        Move pane into a new window
+Ctrl-b q        Show pane numbers
+
+Ctrl-b Left     Resize pane left
+Ctrl-b Right    Resize pane right
+Ctrl-b Up       Resize pane up
+Ctrl-b Down     Resize pane down
+
+Ctrl-b M-Left   Resize pane left by 5
+Ctrl-b M-Right  Resize pane right by 5
+Ctrl-b M-Up     Resize pane up by 5
+Ctrl-b M-Down   Resize pane down by 5
+
+Ctrl-b c        Create new window
+Ctrl-b n        Next window
+Ctrl-b p        Previous window
+Ctrl-b C-h      Previous window
+Ctrl-b C-l      Next window
+Ctrl-b Tab      Switch to last window
+Ctrl-b 0-9      Select window by number
+Ctrl-b ,        Rename current window
+Ctrl-b &        Kill current window
+Ctrl-b f        Find a window
+Ctrl-b '        Select window by number
+
+Ctrl-b d        Detach from tmux
+Ctrl-b s        Show/select sessions
+Ctrl-b C-f      Find a session
+Ctrl-b (        Previous session
+Ctrl-b )        Next session
+Ctrl-b L        Switch to last session
+Ctrl-b C-c      Create new session
+
+Ctrl-b [        Enter copy mode
+Ctrl-b ]        Paste copied text
+Ctrl-b y        Copy selection to system clipboard
+
+COPY MODE (vi)
+
+h                Move cursor left
+j                Move cursor down
+k                Move cursor up
+l                Move cursor right
+w                Move forward one word
+b                Move backward one word
+0                Move to beginning of line
+$                Move to end of line
+g                Go to top
+G                Go to bottom
+Space            Start selection
+Enter            Copy selection
+q                Exit copy mode
+/                Search forward
+?                Search backward
+n                Next search result
+N                Previous search result
+
+Ctrl-b Space     Change layout
+Ctrl-b M-1       Even horizontal layout
+Ctrl-b M-2       Even vertical layout
+Ctrl-b M-3       Main horizontal layout
+Ctrl-b M-4       Main vertical layout
+Ctrl-b M-5       Tiled layout
+Ctrl-b M-6       Horizontal layout
+Ctrl-b M-7       Vertical layout
+
+Ctrl-b m        Toggle mouse mode
+
+Ctrl-b :        Open tmux command prompt
+Ctrl-b ?        Show all key bindings
+Ctrl-b i        Display tmux information
+Ctrl-b r        Refresh client
+Ctrl-b ~        Show messages
+
+tmux split-window -h       Create horizontal split
+tmux split-window -v       Create vertical split
+tmux new-window            Create new window
+tmux new-session            Create new session
+tmux attach                 Attach to existing session
+tmux ls                     List sessions
+tmux kill-pane              Kill current pane
+tmux kill-window            Kill current window
+tmux kill-session -t NAME   Kill a session
+
+tmux source-file ~/.config/tmux/tmux.conf
+                            Reload tmux configuration
+
+tmux source-file ~/.config/tmux/tmux.conf.local
+                            Reload local tmux configuration
+
+tmux list-keys -a           List every active key binding
+tmux show-options -g        Show global options
+tmux show-window-options -g Show global window options
+tmux show-environment -g    Show global environment
+tmux show-hooks -g          Show global hooks
+
+tmux list-panes             List panes
+tmux list-windows           List windows
+tmux display-message        Show current tmux information
