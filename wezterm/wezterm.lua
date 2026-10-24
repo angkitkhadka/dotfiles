@@ -604,11 +604,14 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 	}
 end)
 
--- Startup: avoid automatic session restoration and extra window resizing.
--- WezTerm will create its normal initial window if needed.
 wezterm.on("gui-startup", function(cmd)
-	if #wezterm.mux.all_windows() == 0 then
-		wezterm.mux.spawn_window(cmd or {})
+	local _, _, window = wezterm.mux.spawn_window(cmd or {})
+
+	if window then
+		local gui_window = window:gui_window()
+		if gui_window then
+			gui_window:toggle_fullscreen()
+		end
 	end
 end)
 
