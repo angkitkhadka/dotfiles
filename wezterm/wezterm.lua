@@ -39,6 +39,8 @@ config.hide_tab_bar_if_only_one_tab = false
 config.tab_max_width = 32
 config.status_update_interval = 1000
 
+config.enable_kitty_graphics = true
+
 config.colors = {
 	tab_bar = {
 		background = C.bg,
