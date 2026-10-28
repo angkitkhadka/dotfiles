@@ -18,6 +18,9 @@ config.enable_tab_bar = false
 config.enable_kitty_graphics = true
 config.check_for_updates = false
 
+-- Accept french accents as well
+config.use_ime = true
+
 -- macOS keyboard behavior (Alt works as Meta for nvim/tmux)
 if is_mac then
 	config.send_composed_key_when_left_alt_is_pressed = false
